@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My New Hugo Site</title><link>https://example.org/</link><description>Recent content on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 07 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://example.org/about/</link><pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate><guid>https://example.org/about/</guid><description>&lt;h1 id="about">About&lt;/h1>
+&lt;p>Welcome to my Hugo blog. Here you can find articles about various topics.&lt;/p></description></item><item><title>Archives</title><link>https://example.org/archives/</link><pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate><guid>https://example.org/archives/</guid><description>&lt;h1 id="archives">Archives&lt;/h1>
+&lt;p>{{- $pages := .Site.Pages -}}
+{{- $sorted := $pages | where &amp;ldquo;Type&amp;rdquo; &amp;ldquo;post&amp;rdquo; | sort &amp;ldquo;Date&amp;rdquo; -}}&lt;/p>
+&lt;p>{{ range $sorted }}
+{{ with .Date }}
+&lt;!-- raw HTML omitted -->{{ .Format &amp;ldquo;January 2006&amp;rdquo; }}&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+{{ range where $sorted &amp;ldquo;Date&amp;rdquo; &amp;ldquo;&amp;gt;&amp;rdquo; . }}
+&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->{{ .Title }}&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->
+{{ end }}
+&lt;!-- raw HTML omitted -->
+{{ end }}
+{{ end }}&lt;/p></description></item></channel></rss>
